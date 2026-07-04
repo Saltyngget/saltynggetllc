@@ -231,117 +231,21 @@
             color: #8b949e;
         }
 
-        /* Music Player Station */
-        .music-container {
-            max-width: 900px;
+        /* Real Platform Streaming Integration Box */
+        .streaming-frame-container {
+            max-width: 800px;
             margin: 0 auto;
             background-color: var(--secondary-bg);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(0, 255, 204, 0.15);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        }
+
+        iframe {
             border-radius: 12px;
-            padding: 30px;
-            border: 1px solid rgba(0, 255, 204, 0.08);
-        }
-
-        .track-list {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .track-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 25px;
-            background-color: var(--bg-color);
-            border-radius: 8px;
-            border-left: 4px solid transparent;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .track-row:hover, .track-row.playing {
-            border-left-color: var(--accent-color);
-            background-color: #0d1117;
-            transform: translateX(5px);
-        }
-
-        .track-info {
-            text-align: left;
-        }
-
-        .track-title {
-            color: var(--pure-white);
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .track-artist {
-            font-size: 0.85rem;
-            color: #8b949e;
-        }
-
-        .play-node-btn {
-            background: transparent;
-            border: 2px solid #8b949e;
-            color: #8b949e;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .track-row:hover .play-node-btn, .track-row.playing .play-node-btn {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
-            box-shadow: 0 0 10px var(--accent-glow);
-        }
-
-        /* Master Player Controller Sticky Hub */
-        .master-player-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
+            display: block;
             width: 100%;
-            background-color: #060709;
-            border-top: 2px solid var(--accent-color);
-            padding: 15px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 2000;
-            transform: translateY(100%);
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
-        }
-
-        .master-player-bar.active {
-            transform: translateY(0);
-        }
-
-        .now-playing-meta h4 {
-            color: var(--pure-white);
-            font-size: 0.95rem;
-        }
-
-        .now-playing-meta p {
-            font-size: 0.8rem;
-            color: var(--accent-color);
-        }
-
-        .audio-controls {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        audio {
-            height: 30px;
-            outline: none;
         }
 
         /* Working Form Elements */
@@ -418,7 +322,7 @@
         /* Footer */
         footer {
             background-color: #040507;
-            padding: 60px 8% 120px 8%; /* Extra room for media player */
+            padding: 60px 8%; 
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             font-size: 14px;
@@ -444,7 +348,6 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
             .nav-links { display: none; }
-            .master-player-bar { flex-direction: column; gap: 10px; text-align: center; }
             .cta-group { flex-direction: column; width: 100%; }
             .contact-box { padding: 30px 20px; }
         }
@@ -480,19 +383,16 @@
         <p class="section-subtitle">We don’t just host your files. We scale your business infrastructure globally, while you maintain absolute ownership.</p>
         
         <div class="stats-matrix">
-            <!-- Feature 1 -->
             <div class="stat-card">
                 <div class="stat-num">100%</div>
                 <div class="stat-label">Royalty Retention</div>
                 <div class="stat-desc">Your art, your revenue. Keep complete master ownership and receive pure monthly payouts with absolutely no hidden backend cuts.</div>
             </div>
-            <!-- Feature 2 -->
             <div class="stat-card">
                 <div class="stat-num">150+</div>
                 <div class="stat-label">DSP Networks</div>
                 <div class="stat-desc">Instant synchronization instantly transmitting your records across Spotify, Apple Music, YouTube, TikTok, Tencent, and major high-fidelity markets globally.</div>
             </div>
-            <!-- Feature 3 -->
             <div class="stat-card">
                 <div class="stat-num">Premium</div>
                 <div class="stat-label">Artist Development</div>
@@ -501,46 +401,22 @@
         </div>
     </section>
 
-    <!-- Interactive Top Songs Studio Panel -->
+    <!-- Real Platforms Live Stream Panel -->
     <section id="music" class="section">
-        <h2 class="section-title">The Blueprint Index</h2>
-        <p class="section-subtitle">Stream major algorithmic records powered by the collective sound profile.</p>
+        <h2 class="section-title">The Official Catalog</h2>
+        <p class="section-subtitle">Stream major cryptographic records synced live from verified digital platforms.</p>
         
-        <div class="music-container">
-            <div class="track-list">
-                <!-- Track 1 -->
-                <div class="track-row" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" data-title="Autograph V3" data-artist="Saltyngget (feat. Charuss & MA Beats)">
-                    <div class="track-info">
-                        <div class="track-title">Autograph V3</div>
-                        <div class="track-artist">Saltyngget ft. Charuss & MA Beats</div>
-                    </div>
-                    <button class="play-node-btn">▶</button>
-                </div>
-                <!-- Track 2 -->
-                <div class="track-row" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" data-title="24 songs" data-artist="Saltyngget">
-                    <div class="track-info">
-                        <div class="track-title">24 songs</div>
-                        <div class="track-artist">Saltyngget</div>
-                    </div>
-                    <button class="play-node-btn">▶</button>
-                </div>
-                <!-- Track 3 -->
-                <div class="track-row" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" data-title="Bel Air" data-artist="Saltyngget">
-                    <div class="track-info">
-                        <div class="track-title">Bel Air</div>
-                        <div class="track-artist">Saltyngget</div>
-                    </div>
-                    <button class="play-node-btn">▶</button>
-                </div>
-                <!-- Track 4 -->
-                <div class="track-row" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" data-title="Run" data-artist="Saltyngget & novanitys">
-                    <div class="track-info">
-                        <div class="track-title">Run</div>
-                        <div class="track-artist">Saltyngget & novanitys</div>
-                    </div>
-                    <button class="play-node-btn">▶</button>
-                </div>
-            </div>
+        <div class="streaming-frame-container">
+            <!-- Spotify Artist / Top Track Live Matrix Module -->
+            <iframe 
+                src="https://open.spotify.com/embed/artist/3BskP9Z3BscXFEXx2M50gB?utm_source=generator&theme=0" 
+                width="100%" 
+                height="450" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe >
         </div>
     </section>
 
@@ -579,17 +455,6 @@
         </div>
     </section>
 
-    <!-- Persistent Global Media Controller Frame -->
-    <div id="globalPlayerBar" class="master-player-bar">
-        <div class="now-playing-meta">
-            <h4 id="masterTitle">Track Title</h4>
-            <p id="masterArtist">Artist Name</p>
-        </div>
-        <div class="audio-controls">
-            <audio id="mainAudioElement" controls></audio>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Saltyngget LLC. Led by Georgi Bazhov. Built for sovereign independent catalog control.</p>
@@ -600,44 +465,7 @@
         </div>
     </footer>
 
-    <!-- Core Interactive JavaScript Engine -->
     <script>
-        const globalBar = document.getElementById('globalPlayerBar');
-        const mainAudio = document.getElementById('mainAudioElement');
-        const masterTitle = document.getElementById('masterTitle');
-        const masterArtist = document.getElementById('masterArtist');
-        const trackRows = document.querySelectorAll('.track-row');
-
-        // Audio Stream Matrix Logic
-        trackRows.forEach(row => {
-            row.addEventListener('click', function() {
-                const targetSrc = this.getAttribute('data-src');
-                const title = this.getAttribute('data-title');
-                const artist = this.getAttribute('data-artist');
-
-                if (mainAudio.src === targetSrc && !mainAudio.paused) {
-                    mainAudio.pause();
-                    this.querySelector('.play-node-btn').innerText = '▶';
-                    this.classList.remove('playing');
-                } else {
-                    trackRows.forEach(r => {
-                        r.classList.remove('playing');
-                        r.querySelector('.play-node-btn').innerText = '▶';
-                    });
-
-                    mainAudio.src = targetSrc;
-                    masterTitle.innerText = title;
-                    masterArtist.innerText = artist;
-                    
-                    globalBar.classList.add('active');
-                    this.classList.add('playing');
-                    this.querySelector('.play-node-btn').innerText = '⏸';
-                    mainAudio.play();
-                }
-            });
-        });
-
-        // Functional Demo Submission Hub 
         function handleFormSubmit(e) {
             e.preventDefault();
             document.getElementById('labelForm').style.display = 'none';
